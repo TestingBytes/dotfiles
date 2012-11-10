@@ -12,10 +12,13 @@ export PATH=/opt/local/bin:/opt/local/sbin:/opt/local/lib/postgresql83/bin:/User
 
 export CLICOLOR=1
 
+# Source-Highlight
+export LESSOPEN="| /opt/local/bin/src-hilite-lesspipe.sh %s"
+export LESS=' -R '
+
 # History Settings
 export HISTCONTROL=erasedups
 export HISTSIZE=10000
-shopt -d histappend
 
 # Aliases
 alias ..='cd ..'
@@ -29,12 +32,13 @@ alias o='open'
 alias mkdir='mkdir -p'
 alias login='login -f sam'
 alias grep='grep -i --color=auto'
+alias trop='top -o cpu'
 
 # Aliases - Apps
 alias vi='vim'
 alias v='vim'
-alias b='bitchx'
 alias t='/Users/sam/Dropbox/scripts/todo.sh -d ~/todo.cfg'
+alias cpan='sudo cpan'
 
 #alias q='qlmanage -p "$@" >& /dev/null'
 alias q='ruby ~/bin/quicklook.rb'
@@ -43,6 +47,7 @@ alias drop='ruby ~/bin/drop.rb'
 # Aliases - Mac Ports
 alias search='port search'
 alias install='sudo port install'
+
 
 # Setting PATH for MacPython 2.5
 PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
@@ -84,3 +89,21 @@ function check_exit_status {
  }
 
  PROMPT_COMMAND=check_exit_status
+
+##
+# Your previous /Users/sam/.bash_profile file was backed up as /Users/sam/.bash_profile.macports-saved_2012-07-01_at_11:55:56
+##
+
+# MacPorts Installer addition on 2012-07-01_at_11:55:56: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+
+##
+# Your previous /Users/sam/.bash_profile file was backed up as /Users/sam/.bash_profile.macports-saved_2012-07-01_at_11:58:33
+##
+
+# MacPorts Installer addition on 2012-07-01_at_11:58:33: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+

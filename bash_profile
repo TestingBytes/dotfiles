@@ -4,6 +4,10 @@ export INFOPATH=$INFOPATH:/opt/local/share/info
 
 test -r /sw/bin/init.sh && . /sw/bin/init.sh
 
+  if [ -f /opt/local/etc/bash_completion ]; then
+      . /opt/local/etc/bash_completion
+  fi
+
 export PATH=/opt/local/bin:/opt/local/sbin:/opt/local/lib/postgresql83/bin:/Users/sam/.gem/ruby/1.8/bin:$PATH
 
 export CLICOLOR=1

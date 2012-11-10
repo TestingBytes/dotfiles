@@ -75,7 +75,7 @@ function check_git_changes {
     [ `parse_git_status` -ne 1 ] && tput setaf 1 || tput setaf 2
 }
 
-PROMPT="$LIGHT_GRAY[\w]:$WHITE\[\$(check_git_changes)\]\$(parse_git_branch)$LIGHT_GRAY"
+PROMPT="$LIGHT_GRAY[\u@\h:\w]$WHITE\[\$(check_git_changes)\]\$(parse_git_branch)$LIGHT_GRAY"
 
 # EXIT STATUS
 function check_exit_status {
@@ -90,20 +90,5 @@ function check_exit_status {
 
  PROMPT_COMMAND=check_exit_status
 
-##
-# Your previous /Users/sam/.bash_profile file was backed up as /Users/sam/.bash_profile.macports-saved_2012-07-01_at_11:55:56
-##
-
-# MacPorts Installer addition on 2012-07-01_at_11:55:56: adding an appropriate PATH variable for use with MacPorts.
+# MacPorts
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-
-##
-# Your previous /Users/sam/.bash_profile file was backed up as /Users/sam/.bash_profile.macports-saved_2012-07-01_at_11:58:33
-##
-
-# MacPorts Installer addition on 2012-07-01_at_11:58:33: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
